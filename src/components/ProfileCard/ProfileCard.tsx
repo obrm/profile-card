@@ -1,14 +1,18 @@
-import React, { ReactNode } from 'react';
+import React from 'react';
+
+import { ProfileBio, ProfileName, ProfilePicture } from '..';
+
 import styles from './ProfileCard.module.scss';
 
-interface ProfileCardProps {
-  children: ReactNode;
-}
-
-const ProfileCard: React.FC<ProfileCardProps> = ({ children }) => {
+const ProfileCard: React.FC = () => {
   return (
     <div className={styles.card}>
-      {children}
+      <ProfilePicture
+        src="https://xsgames.co/randomusers/assets/avatars/male/63.jpg"
+        alt="Profile"
+      />
+      <ProfileName name="John Doe" />
+      <ProfileBio bio="Software developer and tech enthusiast." />
     </div>
   );
 };
