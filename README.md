@@ -8,7 +8,7 @@ There are two versions of the app, each with a different implementation of the P
 In the `master` branch, the Profile Card component is a regular React component that includes the Profile Name, Profile Picture, and Profile Bio components directly inside it. The parent `App` component imports the `ProfileCard` component and uses it without passing any children to it.
 
 ### With-Compound Branch - Compound Components
-In the `with-compound branch`, the Profile Card component follows the compound components design pattern. The component accepts children components, allowing for more flexibility in terms of composition. In this version, the `App` component imports the `ProfileCard`, `ProfileName`, `ProfilePicture`, and `ProfileBio` components, and uses them as children of the `ProfileCard` component.
+In the `with-compound` branch, the Profile Card component follows the compound components design pattern. This pattern allows the component to accept children components, providing greater flexibility in terms of composition. In this version, the `App` component imports the `Profile` component, which in turn imports the `ProfileCard`, `ProfileName`, `ProfilePicture`, and `ProfileBio` components. These components are then used as children of the `ProfileCard` component.
 
 To switch between the two versions, you can check out the corresponding branch in your Git repository.
 
